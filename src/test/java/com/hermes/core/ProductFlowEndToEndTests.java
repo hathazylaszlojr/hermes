@@ -82,4 +82,18 @@ public class ProductFlowEndToEndTests extends AbstractEndToEndTest {
         productController.updateProduct(1L, new Product(2L,"new product 3", 17.0d));
     }
 
+    @Test(expected = IllegalArgumentException.class)
+    public void shouldNotCreateProductIfNameIsNull() {
+        productController.addNewProduct(
+                createProduct(null, 22.1d)
+        );
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void shouldNotCreateProductIfPriceIsNOtDefined() {
+        productController.addNewProduct(
+                createProduct("Test product 1", null)
+        );
+    }
+
 }
