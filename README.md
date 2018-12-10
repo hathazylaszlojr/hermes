@@ -29,6 +29,9 @@ Alternatively, the following `curl` commands can be used:
 `curl -XPOST -H "content-type: application/json" -d"{\"email\": \"mymail@example.com\", \"productSkus\": [1]}" localhost:8080/api/v1/orders`
 
 
+By default, data is persisted only to in-memory H2 db.
+To change persistence to disk, the datasource related lines in `application.yml` should be uncommented.
+
 # Further improvements:
 
 There are several areas that can be further developed (not in the order of importance):

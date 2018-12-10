@@ -1,0 +1,9 @@
+# Enable below lines to persist data to disk
+
+#spring:
+#  datasource:
+#    url: jdbc:h2:file:~/hermes-h2-db
+#    username: sa
+#    password:
+#    driver-class-name: org.h2.Driver
+#  jpa.hibernate.ddl-auto: update
