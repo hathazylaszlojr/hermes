@@ -1,24 +1,22 @@
 package com.hermes.core.domain;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
 @Entity
-public class Product {
+@Data
+public class OrderedProduct {
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
+    private Long id;
     private Long sku;
     private String name;
     private Double price;
+    private int quantity = 1; // TODO: Should be updated with the ordered quantity
 
 }
