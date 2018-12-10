@@ -18,7 +18,9 @@ After checking out the project, it can be easily run using:
 
 By default, will use the port 8080.
 
-To test, if it is running (and working) the following `curl` commands can be used:
+Swagger API Documentation can be found at: `http://localhost:8080/swagger-ui.html`
+
+Alternatively, the following `curl` commands can be used:
 
 `curl -XPOST -H "content-type: application/json" -d"{\"name\": \"product 1\", \"price\": 22.1}" localhost:8080/api/v1/products`
 
